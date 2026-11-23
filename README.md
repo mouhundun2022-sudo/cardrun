@@ -256,8 +256,14 @@ cardrun-combat/
 │   └── 03_integration.lua         完整 opts 钩子集成示例
 ├── tests/
 │   └── run.lua             纯 Lua 冒烟测试
+├── docs/
+│   └── ai-prompt.md        AI 提示词（雷霆冲锋枪 / 仓库概览）
 └── README.md
 ```
+
+## AI 提示词
+
+见 [docs/ai-prompt.md](docs/ai-prompt.md)：含「雷霆冲锋枪」实现提示词与仓库整体说明提示词，可直接投喂给 AI 生成同类模块或扩展示例。
 
 ## License
 
