@@ -214,12 +214,12 @@ Data.MODS[#Data.MODS + 1] = {
 
 ```lua
 local Progress = require("combat.progress")
-local p = Progress.New()         -- 1 级新角色
-p:Contribute(100)                -- 上缴战利品 → 贡献点
-p:LevelUp()                      -- 升级（发成长点、解锁技能）
-p:AddStat("con")                 -- 投体质
-p:SetLoadout(1, "pulse_nova")    -- 第 1 槽装备技能
-p:Research("pulse_nova")         -- 研习（升该技能等级）
+local p = Progress.New()          -- 1 级新角色
+p:Contribute(200)                 -- 上缴战利品 → 贡献点
+p:LevelUp()                       -- 升级（发成长点、解锁技能）
+p:Invest("phys")                  -- 投一点体质（另一支系是 "mana"）
+p:EquipSlot(1, "pulse_nova")      -- 第 1 槽装备技能（槽位固定 4 个）
+p:ResearchSkill("pulse_nova")     -- 研习（升该技能等级）
 ```
 
 **⚠️ 存档注意**：`Progress` 是带元表的实例。若你要把它存成 JSON 再读回，
